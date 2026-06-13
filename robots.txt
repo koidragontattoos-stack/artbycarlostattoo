@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://artbycarlostattoo.netlify.app/sitemap.xml
