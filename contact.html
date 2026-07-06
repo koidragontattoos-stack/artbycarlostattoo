@@ -43,7 +43,7 @@
 <li class="dropdown"><a href="index.html#styles">Styles</a><ul class="dropdown-menu"><li><a href="japanese-tattoos.html">Japanese</a></li><li><a href="bio-organic-tattoos.html">Bio-Organic</a></li><li><a href="traditional-tattoos.html">Traditional</a></li><li><a href="neo-traditional-tattoos.html">Neo-Traditional</a></li><li><a href="realism-tattoos.html">Realism</a></li><li><a href="floral-tattoos.html">Fine Line &amp; Floral</a></li><li><a href="watercolor-tattoos.html">Watercolor</a></li><li><a href="coverup-reworks-tattoos.html">Cover-Ups &amp; Reworks</a></li></ul></li>
 <li><a href="index.html#about">About</a></li>
 <li><a href="contact.html">Contact</a></li>
-<li><a class="nav-cta" href="https://www.koidragontattoo.com/contact?artist=carlos-barrera" target="_blank" rel="noopener" data-ga="book_click">Book Now</a></li>
+<li><a class="nav-cta" href="#book" data-ga="book_click">Book Now</a></li>
 </ul>
 </div>
 </nav>
@@ -60,12 +60,12 @@
 <section class="sec-alt">
 <div class="wrap">
 <div class="contact-cards">
-<a class="contact-card reveal" href="https://www.koidragontattoo.com/contact?artist=carlos-barrera" target="_blank" rel="noopener" data-ga="book_click">
-<div class="ic">📅</div><h3>Book Online</h3><p>Request a consultation through the studio booking form — mention Carlos as your artist.</p><div class="val">Book a consultation →</div></a>
+<a class="contact-card reveal" href="#book" data-ga="book_click">
+<div class="ic">📅</div><h3>Book Online</h3><p>Send your idea straight to Carlos with the booking form below — he replies personally.</p><div class="val">Go to the booking form →</div></a>
 <a class="contact-card reveal" href="tel:+18015909444" data-ga="call_click">
 <div class="ic">📞</div><h3>Call the Studio</h3><p>Mon, Wed–Sat, 10am–7pm Mountain Time. Closed Tuesday &amp; Sunday.</p><div class="val">(801) 590-9444</div></a>
-<a class="contact-card reveal" href="mailto:koidragontattoos@gmail.com?subject=Tattoo%20inquiry%20for%20Carlos%20Barrera" data-ga="email_click">
-<div class="ic">✉️</div><h3>Email</h3><p>Send references, ideas, placement and size — Carlos will get back to you.</p><div class="val">koidragontattoos@gmail.com</div></a>
+<a class="contact-card reveal" href="mailto:carlostattoos801@gmail.com?subject=Tattoo%20inquiry%20for%20Carlos%20Barrera" data-ga="email_click">
+<div class="ic">✉️</div><h3>Email</h3><p>Send references, ideas, placement and size — Carlos will get back to you.</p><div class="val">carlostattoos801@gmail.com</div></a>
 </div>
 <div class="features" style="margin-top:18px">
 <div class="feature reveal"><div class="dot">◆</div><h3>Instagram</h3><p>Daily work and healed results — DMs open on all three accounts:</p><p style="margin-top:10px"><a href="https://www.instagram.com/tattoos.carlos" target="_blank" rel="noopener" data-ga="instagram_click" style="color:var(--gold)">@tattoos.carlos</a> · fine line &amp; floral<br><a href="https://www.instagram.com/tattoo.utah.japanese" target="_blank" rel="noopener" data-ga="instagram_click" style="color:var(--gold)">@tattoo.utah.japanese</a> · japanese<br><a href="https://www.instagram.com/utah.realism.tattoos" target="_blank" rel="noopener" data-ga="instagram_click" style="color:var(--gold)">@utah.realism.tattoos</a> · realism</p></div>
@@ -74,7 +74,33 @@
 </div>
 </div>
 </section>
-<section>
+<section id="book">
+<div class="wrap">
+<div class="reveal"><div class="kicker">Book Direct</div>
+<h2 class="sec-title">Request a free consultation</h2>
+<p class="sec-lede">Tell Carlos what you're imagining — style, placement, references. Your message goes straight to him, and he'll reply personally to plan the design and set up your consultation.</p></div>
+<form class="book-form reveal" name="booking" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field">
+<input type="hidden" name="form-name" value="booking">
+<input type="hidden" name="subject" value="New booking inquiry — Art by Carlos Tattoo">
+<p class="hp-field" aria-hidden="true"><label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+<div class="form-grid">
+<div class="form-field"><label for="bf-first">First Name <span class="req" aria-hidden="true">*</span></label><input id="bf-first" name="first-name" type="text" autocomplete="given-name" required></div>
+<div class="form-field"><label for="bf-last">Last Name <span class="req" aria-hidden="true">*</span></label><input id="bf-last" name="last-name" type="text" autocomplete="family-name" required></div>
+<div class="form-field"><label for="bf-email">Email <span class="req" aria-hidden="true">*</span></label><input id="bf-email" name="email" type="email" autocomplete="email" required></div>
+<div class="form-field"><label for="bf-phone">Phone <span class="req" aria-hidden="true">*</span></label><input id="bf-phone" name="phone" type="tel" autocomplete="tel" required></div>
+<div class="form-field"><label for="bf-contact">Preferred contact method <span class="req" aria-hidden="true">*</span></label><select id="bf-contact" name="preferred-contact" required><option value="" disabled selected>Choose one…</option><option>Email</option><option>Phone Call</option><option>Text Message</option></select></div>
+<div class="form-field"><label for="bf-style">Style interested in <span class="req" aria-hidden="true">*</span></label><select id="bf-style" name="style" required><option value="" disabled selected>Choose a style…</option><option>Japanese</option><option>Bio-Organic</option><option>Traditional</option><option>Neo-Traditional</option><option>Realism</option><option>Fine Line &amp; Floral</option><option>Watercolor</option><option>Cover-Up</option><option>Not sure yet</option></select></div>
+<div class="form-field full"><label for="bf-placement">Placement &amp; rough size <span class="opt">(optional — but it helps)</span></label><input id="bf-placement" name="placement-size" type="text" maxlength="120" placeholder="e.g. Left forearm, about 6 inches"></div>
+<div class="form-field full"><label for="bf-message">Message <span class="opt">(optional)</span></label><textarea id="bf-message" name="message" maxlength="1000" rows="6" placeholder="Your idea, reference images you have, whether it's new work or a cover-up, budget and timeline — see the checklist below for what helps most."></textarea></div>
+<div class="form-field full">
+<label class="form-consent"><input type="checkbox" name="consent" value="I consent to my information being collected and stored" required> <span>I consent to Art by Carlos Tattoo collecting and storing my information to respond to my inquiry. Your data won't be shared with third parties.</span></label>
+</div>
+<div class="form-field full"><button class="btn btn-gold" type="submit" data-ga="book_form_submit">Send Message</button></div>
+</div>
+</form>
+</div>
+</section>
+<section class="sec-alt">
 <div class="wrap">
 <div class="reveal"><div class="kicker">Before You Book</div>
 <h2 class="sec-title">What to include in your inquiry</h2></div>
@@ -90,7 +116,7 @@
 <h2>Free consultation.<br>Zero pressure.</h2>
 <p>Tell Carlos what you're imagining — he'll tell you exactly how to get there.</p>
 <div class="hero-ctas">
-<a class="btn btn-gold" href="https://www.koidragontattoo.com/contact?artist=carlos-barrera" target="_blank" rel="noopener" data-ga="book_click">Book a Free Consultation</a>
+<a class="btn btn-gold" href="#book" data-ga="book_click">Book a Free Consultation</a>
 <a class="btn btn-ghost" href="tel:+18015909444" data-ga="call_click">Call (801) 590-9444</a>
 </div>
 </div>
