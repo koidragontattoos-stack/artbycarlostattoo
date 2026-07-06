@@ -2,3 +2,34 @@
 [build]
   publish = "."
   command = ""
+
+# Disable "Pretty URLs" post-processing: it was rewriting internal links to
+# extensionless paths (/contact) while canonical/sitemap/og:url declare .html,
+# splitting URL signals. Served links must match the canonical .html URLs.
+# (If Netlify ignores this for drag-drop deploys, uncheck Pretty URLs under
+# Site configuration -> Build & deploy -> Post processing instead.)
+[build.processing]
+  skip_processing = false
+[build.processing.html]
+  pretty_urls = false
+[build.processing.css]
+  bundle = false
+  minify = false
+[build.processing.js]
+  bundle = false
+  minify = false
+[build.processing.images]
+  compress = false
+
+# Security response headers (applied at Netlify's edge on deploy).
+# CSP allowlist covers: Google Analytics (gtag), Google Cloud Storage images,
+# self-hosted media, inline style attributes, and the Netlify Forms POST.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://storage.googleapis.com https://www.google-analytics.com https://www.googletagmanager.com; media-src 'self'; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"

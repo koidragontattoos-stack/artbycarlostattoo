@@ -1,2 +1,15 @@
 /fine-line-tattoos.html        /floral-tattoos.html  301
 /fine-line-floral-tattoos.html /floral-tattoos.html  301
+
+# Extensionless -> canonical .html (Pretty URLs previously served these; they
+# may be indexed/bookmarked and must not 404 now that Pretty URLs is off)
+/japanese-tattoos        /japanese-tattoos.html        301
+/bio-organic-tattoos     /bio-organic-tattoos.html     301
+/traditional-tattoos     /traditional-tattoos.html     301
+/neo-traditional-tattoos /neo-traditional-tattoos.html 301
+/realism-tattoos         /realism-tattoos.html         301
+/floral-tattoos          /floral-tattoos.html          301
+/watercolor-tattoos      /watercolor-tattoos.html      301
+/coverup-reworks-tattoos /coverup-reworks-tattoos.html 301
+/contact                 /contact.html                 301
+/thank-you               /thank-you.html               301
