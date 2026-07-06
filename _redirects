@@ -1,3 +1,8 @@
+# Send the old Netlify subdomain to the primary custom domain (avoid duplicate
+# site). Must be first so netlify.app/<path> goes to the .com host before the
+# path rules below run. Only matches the netlify.app host, so no loop on .com.
+https://artbycarlostattoo.netlify.app/*  https://artbycarlostattoo.com/:splat  301!
+
 /fine-line-tattoos.html        /floral-tattoos.html  301
 /fine-line-floral-tattoos.html /floral-tattoos.html  301
 
