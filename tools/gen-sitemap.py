@@ -23,6 +23,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SPECIAL = {
     "https://artbycarlostattoo.com/": ("1.0", "weekly"),
     "https://artbycarlostattoo.com/contact.html": ("0.8", "monthly"),
+    "https://artbycarlostattoo.com/about.html": ("0.5", "monthly"),
 }
 DEFAULT = ("0.9", "weekly")
 
