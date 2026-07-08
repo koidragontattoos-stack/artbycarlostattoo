@@ -24,6 +24,8 @@ SPECIAL = {
     "https://artbycarlostattoo.com/": ("1.0", "weekly"),
     "https://artbycarlostattoo.com/contact.html": ("0.8", "monthly"),
     "https://artbycarlostattoo.com/about.html": ("0.5", "monthly"),
+    "https://artbycarlostattoo.com/traveling-for-a-tattoo.html": ("0.7", "monthly"),
+    "https://artbycarlostattoo.com/process.html": ("0.7", "monthly"),
 }
 DEFAULT = ("0.9", "weekly")
 
