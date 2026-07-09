@@ -22,6 +22,10 @@ https://artbycarlostattoo.netlify.app/*  https://artbycarlostattoo.com/:splat  3
 /traveling-for-a-tattoo  /traveling-for-a-tattoo.html  301!
 /process                 /process.html                 301!
 
+# Repo/tooling files stay out of the public site (QA fix N4)
+/README.md   /404.html   404!
+/tools/*     /404.html   404!
+
 # New Phase 3 routes (about is live; the two stubs are noindex until copy lands)
 /about                                /about.html                                301!
 /cover-up-tattoos                     /cover-up-tattoos.html                     301!
