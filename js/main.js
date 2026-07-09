@@ -6,7 +6,7 @@
   }
   // Mobile nav
   var burger=document.querySelector('.burger'),links=document.querySelector('.nav-links');
-  if(burger)burger.addEventListener('click',function(){links.classList.toggle('open')});
+  if(burger){burger.setAttribute('aria-expanded','false');burger.addEventListener('click',function(){var open=links.classList.toggle('open');burger.setAttribute('aria-expanded',open?'true':'false')});}
   document.querySelectorAll('.dropdown>a').forEach(function(d){
     d.addEventListener('click',function(e){if(window.innerWidth<=600){e.preventDefault();d.parentElement.classList.toggle('open')}});
   });
