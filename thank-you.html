@@ -12,7 +12,16 @@
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZX91LVJ7V7"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-ZX91LVJ7V7',{'tattoo_style':'Booking Confirmation'});gtag('event','book_form_success',{page_path:location.pathname});</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-ZX91LVJ7V7',{'tattoo_style':'Booking Confirmation'});
+/* Conversion signal, guarded to fire once per browser session so a refresh,
+   back/forward navigation, or a direct hit on this URL can't inflate the count.
+   generate_lead is the GA4 recommended-event name (mark it as the key event in
+   GA4 Admin); book_form_success stays alongside for continuity with history.
+   If sessionStorage is unavailable the events still fire (overcounting a rare
+   edge case beats silently dropping real inquiries). */
+(function(){try{if(sessionStorage.getItem('ga4_lead_fired'))return;sessionStorage.setItem('ga4_lead_fired','1')}catch(e){}
+gtag('event','generate_lead',{form_id:'booking',method:'netlify_form',page_path:location.pathname});
+gtag('event','book_form_success',{page_path:location.pathname});})();</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>

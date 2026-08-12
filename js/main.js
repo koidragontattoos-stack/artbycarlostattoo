@@ -33,11 +33,16 @@
     var el=e.target.closest('[data-ga]');
     if(el)track(el.getAttribute('data-ga'),{link_url:el.href||'',link_text:(el.textContent||'').trim().slice(0,80)});
   });
-  // Scroll depth (90%)
+  // Scroll depth (90%) — only meaningful on pages well taller than the viewport.
+  // On short pages the ratio clears 0.9 on the first scroll tick, making this a
+  // near-auto-firing event that polluted GA4 (suspected source of the bogus
+  // "key events" from 4-second sessions), so those pages are skipped entirely.
   var fired=false;
   window.addEventListener('scroll',function(){
     if(fired)return;
-    var d=(window.scrollY+window.innerHeight)/document.body.scrollHeight;
+    var h=document.body.scrollHeight;
+    if(h<window.innerHeight*1.5)return;
+    var d=(window.scrollY+window.innerHeight)/h;
     if(d>0.9){fired=true;track('scroll_90',{})}
   },{passive:true});
 })();

@@ -2,3 +2,9 @@
 Thumbs.db
 *.zip
 node_modules/
+
+# Secrets - must NEVER be committed/deployed (publish dir is the repo root ".").
+*service-account*.json
+*.iam.gserviceaccount.com.json
+gcp-*.json
+ascendos-analytics-*.json
